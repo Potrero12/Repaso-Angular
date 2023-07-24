@@ -1,0 +1,13 @@
+<h1>
+    {{titulo}}
+</h1>
+<p>Las zapatillas mas vendidas del mes</p>
+
+<ul *ngFor="let zapatilla of zapatillas">
+    
+    <span *ngIf="zapatilla.precio <= 500" [style.background]="zapatilla.precio <= 500 ? 'green' : 'transparent'" >!EN OFERTA</span>
+    <li>Nombre: {{zapatilla.nombre}}</li>
+    <li>Precio: ${{zapatilla.precio}}</li>
+    <li>Color: {{zapatilla.color}}</li>
+    <li>Marca: {{zapatilla.marca}}</li>
+</ul>
