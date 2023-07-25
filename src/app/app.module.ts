@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
 
 import { VideoJuegoComponent } from './videojuego/videojuego.component';
 import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { HomeComponent } from './home/home.component';
+
 
 
 @NgModule({
@@ -14,11 +17,13 @@ import { CursosComponent } from './cursos/cursos.component';
     AppComponent,
     VideoJuegoComponent,
     ZapatillasComponent,
-    CursosComponent
+    CursosComponent,
+    HomeComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

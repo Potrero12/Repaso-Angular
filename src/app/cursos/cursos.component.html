@@ -2,6 +2,11 @@
 
 <p>Los mejores Cursos de Angular</p>
 
+<button (click)="redirigir()">Llevame a zapatillas</button>
+
+<h3 *ngIf="nombre">Bienvenido {{nombre}} {{apellido}}</h3>
+<h3 *ngIf="followers">Seguidores: {{followers}}</h3>
+
 <ul>
     <li>Angular 1</li>
     <li>Angular 2</li>

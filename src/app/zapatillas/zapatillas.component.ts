@@ -36,8 +36,6 @@ export class ZapatillasComponent implements OnInit{
         this.marcas.push(zapatilla.marca);
       }
     })
-
-    console.log(this.marcas);
   }
 
   getMarca(){

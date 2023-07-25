@@ -4,14 +4,13 @@
     <h1>Bienvenido a {{title}}</h1>
     <p>{{descripcion}}</p>
 
-    <!-- <button (click)="ocultarVideoJuego(false)" *ngIf="mostrarVideoJuego">Ocultar Modulo VideoJuegos</button>
-    <button (click)="ocultarVideoJuego(true)" *ngIf="!mostrarVideoJuego">Mostrar Modulo VideoJuegos</button>
+    <nav>
+        <a [routerLink]="['/home']" [routerLinkActive]="['active']">Inicio</a> &nbsp;
+        <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>&nbsp;
+        <a [routerLink]="['/video-juegos']" [routerLinkActive]="['active']">Video Juegos</a>&nbsp;
+        <a [routerLink]="['/zapatillas']" [routerLinkActive]="['active']">Zapatillas</a>&nbsp;
+    </nav>
 
-    <video-juego *ngIf="mostrarVideoJuego"></video-juego>
-    <hr /> -->
-    <app-zapatillas></app-zapatillas>
+    <router-outlet></router-outlet>
 
-    <!-- <hr />
-
-    <app-cursos></app-cursos> -->
 </div>
