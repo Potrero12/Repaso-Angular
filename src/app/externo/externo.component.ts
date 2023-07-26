@@ -12,10 +12,17 @@ export class ExternoComponent implements OnInit{
     public userId:number;
     public fecha:any;
 
+    public new_user:any;
+    public usuario_guardado:any;
+
     constructor(
       private _peticionesService: PeticionesService
     ){
       this.userId = 1;
+      this.new_user = {
+                    "name": "",
+                    "job": ""
+                }
     }
 
     ngOnInit() {
@@ -29,5 +36,18 @@ export class ExternoComponent implements OnInit{
         this.user = data;
         this.userId = data.id;
       });
+    }
+
+    // post es suscribir y response o asignar los valores
+    guardarUsuario(form:any){
+      this._peticionesService.addUser(this.new_user).subscribe(
+        response => {
+          this.usuario_guardado = response;
+
+          form.reset();
+        }, error => {
+          console.log(error);
+        }
+      )
     }
 }

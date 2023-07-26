@@ -13,6 +13,7 @@ import { VideoJuegoComponent } from './videojuego/videojuego.component';
 import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 
 import { CalculadoraPipe } from './pipes/calculadora.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CalculadoraPipe } from './pipes/calculadora.pipe';
     HomeComponent,
     VideoJuegoComponent,
     ZapatillasComponent,
+    ContactoComponent,
   ],
   imports: [
     AppRoutingModule,
